@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap');
+/* Color */
+$primary-color: #ffffff;
+$non-active-menu: #808080;
+$btn-color: #00B140;
+$heading-color: #212322;
+$placeholder-color: #808080;
+
+/* Font */
+$main-font: 'Plus Jakarta Sans',
+sans-serif;
+;
+$heading-font: 'Sora',
+sans-serif;
+
+* {
+    box-sizing: border-box;
+    font-family: $main-font;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container-nav {
+    margin: 0 auto;
+    /* max-width: 1420px; */
+}
+
+body {
+    display: flex;
+}
+
+nav {
+    position: fixed;
+    background-color: $heading-color;
+    color: $non-active-menu;
+    width: 288px;
+    height: 100%;
+    z-index: 1;
+
+    .sidebar {
+        display: block;
+        justify-content: center;
+        margin: 0 auto;
+
+        & .logo {
+            margin: 32px 75px 16px 75px;
+        }
+    }
+
+    .navbar-menu {
+        margin-top: 64px;
+
+        a {
+            color: $non-active-menu;
+        }
+
+        ul li {
+            width: 176px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin: 20px auto;
+            cursor: pointer;
+
+            a {
+                color: $non-active-menu;
+                font-weight: 600;
+            }
+
+            &.active {
+                background-color: $btn-color;
+                border-radius: 10px;
+
+                a {
+                    color: $primary-color;
+                }
+            }
+
+            img {
+                color: $primary-color;
+                font-size: 16px;
+            }
+        }
+
+        li img {
+            margin-right: 8px;
+            width: 24px;
+        }
+    }
+}
+
+.logout {
+    display: flex;
+    border-radius: 5px;
+    background-color: #F9F9F9;
+    cursor: pointer;
+    width: 176px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    margin: 200px auto 0;
+
+    .icon-logout {
+        width: 24px;
+        margin-right: 8px;
+    }
+
+    li {
+        display: flex;
+        margin: auto;
+    }
+
+    a {
+        font-weight: 600;
+        margin: auto;
+        color: $heading-color;
+        font-size: 16px;
+    }
+}
+
+
+
+
+main {
+    margin-left: 288px;
+    width: 100%;
+
+    .title {
+        height: 80px;
+
+        h1 {
+            padding: 26px 56px;
+            border-bottom: 0.5px solid #F3F3F3;
+        }
+    }
+
+    .container {
+        margin: 32px 56px;
+        position: relative;
+
+        .data-izin {
+            display: flex;
+            margin: auto;
+        }
+
+        .content-left {
+            display: block;
+            border: 0.5px solid #F3F3F3;
+            border-radius: 2px;
+
+            label {
+                font-size: 18px;
+                display: block;
+            }
+
+            .form-group {
+                display: flex;
+            }
+
+            .label-group {
+                // display: block;
+                justify-content: space-between;
+                margin: 20px;
+
+                input {
+                    width: 300px;
+                    height: 44px;
+                    border-radius: 2px;
+                    border: 0.5px solid #D9D9D9;
+                    align-items: center;
+                }
+
+                .textarea {
+                    width: 610px;
+                    height: 110px;
+                    resize: none;
+                    border: 0.5px solid #D9D9D9;
+
+                }
+
+                ::placeholder {
+                    padding-left: 16px;
+                }
+
+                .flex {
+                    display: flex;
+                    align-items: center;
+
+                    p {
+                        margin-left: 50px;
+                    }
+
+                    .btn-jujur {
+                        display: flex;
+                        align-items: center;
+
+                        .switch {
+                            position: relative;
+                            display: inline-block;
+                            width: 38px;
+                            height: 20px;
+                        }
+
+                        .switch input {
+                            opacity: 0;
+                            width: 0;
+                            height: 0;
+                        }
+
+                        .slider {
+                            position: absolute;
+                            cursor: pointer;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background-color: #ccc;
+                            -webkit-transition: .4s;
+                            transition: .4s;
+                        }
+
+                        .slider:before {
+                            position: absolute;
+                            content: "";
+                            height: 16px;
+                            width: 16px;
+                            left: 3px;
+                            bottom: 2px;
+                            background-color: white;
+                            -webkit-transition: .4s;
+                            transition: .4s;
+                        }
+
+                        input:checked+.slider {
+                            background-color: #00B140;
+                        }
+
+                        input:focus+.slider {
+                            box-shadow: 0 0 1px #00B140;
+                        }
+
+                        input:checked+.slider:before {
+                            -webkit-transform: translateX(17px);
+                            -ms-transform: translateX(17px);
+                            transform: translateX(17px);
+                        }
+
+                        /* Rounded sliders */
+                        .slider.round {
+                            border-radius: 34px;
+                        }
+
+                        .slider.round:before {
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+
+            button {
+                width: 608px;
+                height: 48px;
+                background-color: $btn-color;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+
+                p {
+                    font-weight: 600;
+                    color: $primary-color;
+                }
+            }
+        }
+
+        .content-right {
+            margin-left: 56px;
+            width: 336px;
+            height: 220px;
+            border-radius: 2px;
+            border: 0.5px solid #F3F3F3;
+
+            .text-content {
+                padding: 20px;
+
+                h2 {
+                    font-size: 26px;
+                    position: relative;
+                }
+
+                p {
+                    text-align: center;
+                    margin-bottom: 16px;
+                }
+
+                .text-sum {
+                    margin: 20px;
+                }
+
+                .sum {
+                    font-size: 74px;
+                    font-family: $heading-font;
+                }
+            }
+        }
+    }
+}
