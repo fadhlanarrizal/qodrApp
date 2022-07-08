@@ -34,6 +34,7 @@ header .navbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 15px;
 }
 
 header .hamburger {
@@ -399,9 +400,6 @@ main .container .content-right .text-content .sum {
         -ms-flex-align: center;
             align-items: center;
   }
-  body header .navbar img {
-    padding: 16px 24px;
-  }
   body header .navbar .btn-navbar {
     padding: 16px 24px;
     color: #212322;
@@ -432,6 +430,7 @@ main .container .content-right .text-content .sum {
   body nav.nav-menu.active {
     position: absolute;
     display: block;
+    width: 100%;
     right: 0;
   }
   body nav.nav-menu.active .sidebar .menu {
@@ -484,9 +483,6 @@ main .container .content-right .text-content .sum {
         -ms-flex-align: center;
             align-items: center;
   }
-  body header .navbar img {
-    padding: 16px 24px;
-  }
   body header .navbar .btn-navbar {
     padding: 16px 24px;
   }
@@ -517,9 +513,6 @@ main .container .content-right .text-content .sum {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  body header .navbar img {
-    padding: 16px 24px;
   }
   body header .navbar .btn-navbar {
     padding: 16px 24px;

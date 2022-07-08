@@ -38,6 +38,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 15px;
     }
 
     .hamburger {
@@ -358,9 +359,9 @@ main {
                 justify-content: space-between;
                 align-items: center;
 
-                img {
-                    padding: 16px 24px;
-                }
+                // img {
+                //     padding: 16px 24px;
+                // }
 
                 .btn-navbar {
                     padding: 16px 24px;
@@ -397,6 +398,7 @@ main {
                 position: absolute;
                 display: block;
                 // top: 0;
+                width: 100%;
                 right: 0;
                 .sidebar{
                     .menu{
@@ -451,10 +453,6 @@ main {
                 justify-content: space-between;
                 align-items: center;
 
-                img {
-                    padding: 16px 24px;
-                }
-
                 .btn-navbar {
                     padding: 16px 24px;
                 }
@@ -487,10 +485,6 @@ main {
                 height: 56px;
                 justify-content: space-between;
                 align-items: center;
-
-                img {
-                    padding: 16px 24px;
-                }
 
                 .btn-navbar {
                     padding: 16px 24px;
