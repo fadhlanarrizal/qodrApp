@@ -39,11 +39,11 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 15px;
     }
 
     .hamburger {
         display: none;
-
         .bar {
             display: block;
             width: 22px;
@@ -350,7 +350,6 @@ main {
         display: block;
 
         header {
-
             // position: absolute;
             .navbar {
                 display: flex;
@@ -362,31 +361,38 @@ main {
                 img {
                     padding: 16px 24px;
                 }
-
                 .btn-navbar {
                     padding: 16px 24px;
                     color: $heading-color;
                 }
 
                 .hamburger {
+                    z-index: 2;
                     display: block;
                     cursor: pointer;
                 }
-
+                .hamburger.active{
+                    margin-top: 15px;
+                }
                 .hamburger.active .bar:nth-child(2) {
                     opacity: 0;
                 }
 
                 .hamburger.active .bar:nth-child(1) {
                     transform: translateY(8px) rotate(45deg);
+                    background-color: $primary-color;
+                    margin-top: 5px;
                 }
 
                 .hamburger.active .bar:nth-child(3) {
                     transform: translateY(-8px) rotate(-45deg);
+                    background-color: $primary-color;
                 }
             }
         }
-
+        .bar{
+            background-color: $primary-color;
+        }
         nav {
             display: none;
             height: auto;
@@ -395,16 +401,21 @@ main {
                 display: none;
             }
             &.nav-menu.active {
-                position: absolute;
+                // position: absolute;
                 display: block;
-                // top: 0;
-                // width: 100%;
+                top: 0;
+                width: 100%;
                 right: 0;
                 .sidebar{
                     .menu{
                         justify-content: space-between;
                         align-items: center;
                         display: flex;
+                    }
+                    .navbar-menu{
+                        ul li{
+                            width: 240px;
+                        }
                     }
                     .logout{
                         margin-top: 160px;
@@ -474,7 +485,7 @@ main {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 375px) {
     body {
         header {
             position: absolute;
