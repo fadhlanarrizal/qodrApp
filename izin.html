@@ -5,28 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Izin Santri</title>
 </head>
 
 <body>
-    <nav>
+    <header class="header">
+        <div class="navbar">
+            <img src="assets/Icon/logoQodr.svg" alt="logo qodr">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+    <nav class="nav-menu">
         <div class="sidebar">
+            <div class="menu">
+                <h1>Menu</h1>
+            </div>
             <div class="logo"><img src="Logo_Qodr.png" alt="logo qodr"></div>
             <div class="navbar-menu">
                 <ul>
-                    <li><img src="assets/Icon/Profile.png"><a href="#">Profil</a></li>
-                    <li><img src="assets/Icon/Tahfidz.png"><a href="#">Tahfidz</a></li>
-                    <li><img src="assets/Icon/Roadmap.png"><a href="#">Roadmap</a></li>
-                    <li><img src="assets/Icon/Portfolio.png"><a href="#">Portfolio</a></li>
-                    <li><img src="assets/Icon/Survei.png"><a href="#">Survei</a></li>
-                    <li class="active"><img src="assets/Icon/Izin.png"><a href="#">Izin</a></li>
-                    <li><img src="assets/Icon/Pengaturan.png"><a href="#">Pengaturan</a></li>
+                    <li><img src="assets/Icon/profile.svg"><a href="#">Profil</a></li>
+                    <li><img src="assets/Icon/tahfidz.svg"><a href="#">Tahfidz</a></li>
+                    <li><img src="assets/Icon/roadmap.svg"><a href="#">Roadmap</a></li>
+                    <li><img src="assets/Icon/portfolio.svg"><a href="#">Portfolio</a></li>
+                    <li><img src="assets/Icon/survei.svg"><a href="#">Survei</a></li>
+                    <li class="active"><img src="assets/Icon/izin.svg"><a href="#">Izin</a></li>
+                    <li><img src="assets/Icon/pengaturan.svg"><a href="#">Pengaturan</a></li>
                 </ul>
             </div>
             <div class="logout">
                 <li>
-                    <img class="icon-logout" src="assets/Icon/Logout.png"><a href="#">Keluar</a>
+                    <img class="icon-logout" src="assets/Icon/Logout.svg"><a href="#">Keluar</a>
                 </li>
             </div>
         </div>
@@ -36,18 +50,17 @@
         <div class="title">
             <h1>Izin</h1>
         </div>
-        <div class="container">
-            <div class="data-izin">
+        <div class="container data-izin">
                 <div class="content-left">
                     <form action="#">
                         <div class="form-group">
                             <div class="label-group">
                                 <label for="waktu-pergi">Tanggal & Waktu Pergi</label>
-                                <input type="date" name="waktu-pergi" placeholder="dd/mm/yy">
+                                <input type="date" name="waktu-pergi">
                             </div>
                             <div class="label-group">
                                 <label for="waktu-pulang">Estimasi Pulang</label>
-                                <input type="date" name="waktu-pulang" placeholder="dd/mm/yy">
+                                <input type="date" name="waktu-pulang">
                             </div>
                         </div>
                         <div class="form-group">
@@ -64,7 +77,6 @@
                             <div class="label-group">
                                 <label for="keperluan">Keperluan</label>
                                 <textarea name="keperluan" cols="30" rows="10" placeholder="Masukan keperluan dengan rinci.." class="textarea"></textarea>
-                                <!-- <input type="text" name="keperluan" placeholder="Masukan keperluan dengan rinci.." class="textarea"> -->
                             </div>
                         </div>
                             <div class="label-group">
@@ -88,6 +100,7 @@
 
                     </form>
                 </div>
+
                 <div class="content-right">
                     <div class="text-content">
                         <h2>Data Izin</h2>
@@ -97,10 +110,20 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </main>
+<script>
 
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+</script>
 </body>
 
 </html>
