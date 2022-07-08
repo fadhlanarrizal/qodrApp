@@ -404,9 +404,6 @@ main .container .content-right .text-content .sum {
         -ms-flex-align: center;
             align-items: center;
   }
-  body header .navbar img {
-    padding: 16px 24px;
-  }
   body header .navbar .btn-navbar {
     padding: 16px 24px;
     color: #212322;
