@@ -39,7 +39,6 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 15px;
     }
 
     .hamburger {
@@ -360,9 +359,9 @@ main {
                 justify-content: space-between;
                 align-items: center;
 
-                // img {
-                //     padding: 16px 24px;
-                // }
+                img {
+                    padding: 16px 24px;
+                }
 
                 .btn-navbar {
                     padding: 16px 24px;
@@ -475,7 +474,7 @@ main {
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
     body {
         header {
             position: absolute;
