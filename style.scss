@@ -33,6 +33,7 @@ body {
 }
 
 header {
+    display: none;
     .navbar {
         border-bottom: 0.5px solid #F3F3F3;
         display: flex;
@@ -398,7 +399,7 @@ main {
                 position: absolute;
                 display: block;
                 // top: 0;
-                width: 100%;
+                // width: 100%;
                 right: 0;
                 .sidebar{
                     .menu{
@@ -407,6 +408,7 @@ main {
                         display: flex;
                     }
                     .logout{
+                        margin-top: 160px;
                         margin-bottom: 30px;
                     }
                 }

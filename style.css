@@ -23,6 +23,10 @@ body {
   display: flex;
 }
 
+header {
+  display: none;
+}
+
 header .navbar {
   border-bottom: 0.5px solid #F3F3F3;
   display: -webkit-box;
@@ -430,7 +434,6 @@ main .container .content-right .text-content .sum {
   body nav.nav-menu.active {
     position: absolute;
     display: block;
-    width: 100%;
     right: 0;
   }
   body nav.nav-menu.active .sidebar .menu {
@@ -445,6 +448,7 @@ main .container .content-right .text-content .sum {
     display: flex;
   }
   body nav.nav-menu.active .sidebar .logout {
+    margin-top: 160px;
     margin-bottom: 30px;
   }
   body main {
