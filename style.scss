@@ -373,6 +373,9 @@ main {
                 }
                 .hamburger.active{
                     margin-top: 15px;
+                    margin-right: 15px;
+                    position: fixed;
+                    right: 0;
                 }
                 .hamburger.active .bar:nth-child(2) {
                     opacity: 0;
