@@ -434,6 +434,7 @@ main .container .content-right .text-content .sum {
     background-color: #ffffff;
   }
   body nav {
+    position: fixed;
     display: none;
     height: auto;
     border-radius: 5px;
