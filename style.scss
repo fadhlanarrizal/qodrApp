@@ -34,6 +34,7 @@ body {
 
 header {
     display: none;
+
     .navbar {
         border-bottom: 0.5px solid #F3F3F3;
         display: flex;
@@ -44,6 +45,7 @@ header {
 
     .hamburger {
         display: none;
+
         .bar {
             display: block;
             width: 22px;
@@ -63,15 +65,17 @@ nav {
     width: 288px;
     height: 100%;
     z-index: 1;
+
     .sidebar {
         display: block;
         justify-content: center;
         margin: 0 auto;
-        .menu{
-            display: none;
+
+        .menu {
             color: $primary-color;
             padding: 20px;
         }
+
         .logo {
             padding: 32px 75px 16px 75px;
         }
@@ -129,7 +133,7 @@ nav {
     height: 48px;
     align-items: center;
     justify-content: center;
-    margin: 200px auto 0;
+    margin: 160px auto 0;
 
     .icon-logout {
         width: 24px;
@@ -344,13 +348,21 @@ main {
     }
 }
 
+@media screen and (min-width: 769px) {
+    .sidebar{
+        .menu{
+            display: none;
+        }
+    }
+}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
     body {
         display: block;
 
         header {
-            // position: absolute;
+            position: absolute;
+
             .navbar {
                 display: flex;
                 width: auto;
@@ -358,12 +370,8 @@ main {
                 justify-content: space-between;
                 align-items: center;
 
-                // img {
-                //     padding: 16px 24px;
-                // }
                 .btn-navbar {
                     padding: 16px 24px;
-                    color: $heading-color;
                 }
 
                 .hamburger {
@@ -371,12 +379,14 @@ main {
                     display: block;
                     cursor: pointer;
                 }
-                .hamburger.active{
+
+                .hamburger.active {
                     margin-top: 15px;
                     margin-right: 15px;
                     position: fixed;
                     right: 0;
                 }
+
                 .hamburger.active .bar:nth-child(2) {
                     opacity: 0;
                 }
@@ -393,34 +403,44 @@ main {
                 }
             }
         }
-        .bar{
+
+        .bar {
             background-color: $primary-color;
         }
+
         nav {
             position: fixed;
-            display: none;
-            height: auto;
-            border-radius: 5px;
-            .logo{
+
+            .logo {
                 display: none;
+            }
+            &.nav-menu{
+                ul li{
+                    width: 240px;
+                }
             }
             &.nav-menu.active {
                 display: block;
                 top: 0;
                 width: 100%;
+                transform: translate(0);
                 right: 0;
-                .sidebar{
-                    .menu{
+                transition: transform 0.5s ease-in-out;
+
+                .sidebar {
+                    .menu {
                         justify-content: space-between;
                         align-items: center;
                         display: flex;
                     }
-                    .navbar-menu{
-                        ul li{
+
+                    .navbar-menu {
+                        ul li {
                             width: 240px;
                         }
                     }
-                    .logout{
+
+                    .logout {
                         margin-top: 160px;
                         margin-bottom: 30px;
                     }
@@ -434,54 +454,20 @@ main {
             .title {
                 h1 {
                     font-size: 28px;
-                    padding: 30px;
+                    padding: 32px 20px;
                     border-bottom: none;
                 }
             }
-
-            .container {
+            .container{
                 display: block;
-
-                .data-izin {
-                    .content-left {
+                
+                .data-izin{
+                    .content-left{
                         width: 100%;
                     }
                 }
-
-                .content-right {
+                .content-right{
                     margin: 18px auto;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 425px) {
-    body {
-        header {
-            display: contents;
-
-            .navbar {
-                display: flex;
-                width: auto;
-                height: 56px;
-                justify-content: space-between;
-                align-items: center;
-
-                .btn-navbar {
-                    padding: 16px 24px;
-                }
-            }
-        }
-
-        main {
-            margin-left: 0;
-
-            .title {
-                h1 {
-                    font-size: 28px;
-                    padding: 32px 20px;
-                    border-bottom: none;
                 }
             }
         }
@@ -508,7 +494,12 @@ main {
         }
 
         nav {
-            display: none;
+            transition: transform 0.5s ease-in-out;
+            transform: translate(150%);
+            right: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
         }
 
         main {
