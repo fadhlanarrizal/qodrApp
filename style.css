@@ -259,6 +259,7 @@ main .container .content-left .label-group ::placeholder {
 }
 
 main .container .content-left .label-group .flex {
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -392,18 +393,19 @@ main .container .content-right .text-content .sum {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   body {
     display: block;
   }
   body header {
-    position: absolute;
+    position: relative;
+    display: contents;
   }
   body header .navbar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: auto;
+    width: 100%;
     height: 56px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -445,6 +447,16 @@ main .container .content-right .text-content .sum {
   }
   body nav {
     position: fixed;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    -webkit-transform: translate(150%);
+            transform: translate(150%);
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
   }
   body nav .logo {
     display: none;
@@ -486,11 +498,12 @@ main .container .content-right .text-content .sum {
     margin-left: 0;
   }
   body main .title h1 {
-    font-size: 28px;
-    padding: 32px 20px;
     border-bottom: none;
   }
   body main .container {
+    display: block;
+  }
+  body main .container .data-izin {
     display: block;
   }
   body main .container .data-izin .content-left {
@@ -499,9 +512,56 @@ main .container .content-right .text-content .sum {
   body main .container .content-right {
     margin: 18px auto;
   }
+  body main .container .content-left {
+    width: 333px;
+    border: none;
+    padding: 0;
+  }
+  body main .container .content-left .form-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 30px;
+  }
+  body main .container .content-left .group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+  }
+  body main .container .content-left .label-group {
+    display: block;
+  }
+  body main .container .content-left .label-group input {
+    width: 312px;
+    height: 42px;
+    margin: 16px 0;
+  }
+  body main .container .content-left .label-group .textarea {
+    width: 312px;
+    height: 140px;
+  }
+  body main .container .content-left .label-group .flex {
+    display: block;
+  }
+  body main .container .content-left .label-group .btn-jujur {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body main .container .content-left button {
+    width: 656px;
+  }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   body header {
     position: absolute;
     display: contents;
@@ -556,16 +616,19 @@ main .container .content-right .text-content .sum {
   body main .container .content-left .form-group {
     display: block;
   }
+  body main .container .content-left .group {
+    display: block;
+  }
   body main .container .content-left .label-group {
     display: block;
   }
   body main .container .content-left .label-group input {
-    width: 312px;
+    width: 357px;
     height: 42px;
     margin: 16px 0;
   }
   body main .container .content-left .label-group .textarea {
-    width: 312px;
+    width: 357px;
     height: 140px;
   }
   body main .container .content-left .label-group .flex {
@@ -580,12 +643,27 @@ main .container .content-right .text-content .sum {
             justify-content: center;
   }
   body main .container .content-left .label-group button {
-    width: 312px;
+    width: 357px;
     height: 48px;
   }
   body main .container .content-right {
     margin-left: 0;
     margin-top: 280px;
+    width: 357px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body main .container .content-left .label-group input {
+    width: 312px;
+  }
+  body main .container .content-left .label-group .textarea {
+    width: 312px;
+  }
+  body main .container .content-left .label-group button {
+    width: 312px;
+  }
+  body main .container .content-right {
     width: 312px;
   }
 }

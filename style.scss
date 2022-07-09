@@ -224,6 +224,7 @@ main {
                 }
 
                 .flex {
+                    width: auto;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -348,6 +349,10 @@ main {
     }
 }
 
+// @media screen and (min-width: 1024px) {
+
+// }
+
 @media screen and (min-width: 769px) {
     .sidebar{
         .menu{
@@ -356,16 +361,18 @@ main {
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
     body {
         display: block;
 
         header {
-            position: absolute;
+            position: relative;
+            display: contents;
 
             .navbar {
+                // position: fixed;
                 display: flex;
-                width: auto;
+                width: 100%;
                 height: 56px;
                 justify-content: space-between;
                 align-items: center;
@@ -410,7 +417,12 @@ main {
 
         nav {
             position: fixed;
-
+            transition: transform 0.5s ease-in-out;
+            transform: translate(150%);
+            right: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
             .logo {
                 display: none;
             }
@@ -453,15 +465,18 @@ main {
 
             .title {
                 h1 {
-                    font-size: 28px;
-                    padding: 32px 20px;
+                    // font-size: 28px;
+                    // padding: 32px 20px;
                     border-bottom: none;
                 }
             }
             .container{
                 display: block;
+                // margin: 32px 24px;
+                
                 
                 .data-izin{
+                    display: block;
                     .content-left{
                         width: 100%;
                     }
@@ -469,12 +484,50 @@ main {
                 .content-right{
                     margin: 18px auto;
                 }
+                .content-left{
+                    width: 333px;
+                    border: none;
+                    padding: 0;
+                    .form-group{
+                        display: flex;
+                        width: auto;
+                        justify-content: space-between;
+                        gap: 30px;
+                    }
+                    .group{
+                        display: flex;
+                        gap: 30px;
+                    }
+                    .label-group{
+                        display: block;
+
+                        input {
+                            width: 312px;
+                            height: 42px;
+                            margin: 16px 0;
+                        }
+                        .textarea{
+                            width: 312px;
+                            height: 140px;
+                        }
+                        .flex{
+                            display: block;
+                        }
+                        .btn-jujur{
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+                    button{
+                        width: 656px;
+                    }
+                }
             }
         }
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
     body {
         header {
             position: absolute;
@@ -528,18 +581,20 @@ main {
                     .form-group {
                         display: block;
                     }
-
+                    .group{
+                        display: block;
+                    }
                     .label-group {
                         display: block;
 
                         input {
-                            width: 312px;
+                            width: 357px;
                             height: 42px;
                             margin: 16px 0;
                         }
 
                         .textarea {
-                            width: 312px;
+                            width: 357px;
                             height: 140px;
                         }
 
@@ -553,7 +608,7 @@ main {
                         }
 
                         button {
-                            width: 312px;
+                            width: 357px;
                             height: 48px;
                         }
                     }
@@ -562,6 +617,32 @@ main {
                 .content-right {
                     margin-left: 0;
                     margin-top: 280px;
+                    width: 357px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body{
+        main{
+            .container{
+                .content-left{
+                    .label-group{
+                        input{
+                            width: 312px;
+                        }
+                        .textarea{
+                            width: 312px;
+                        }
+                        button{
+                            width: 312px;
+
+                        }
+                    }
+                }
+                .content-right{
                     width: 312px;
                 }
             }
