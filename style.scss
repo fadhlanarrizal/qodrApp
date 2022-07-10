@@ -58,6 +58,13 @@ header {
     }
 }
 
+ul li {
+    a {
+        color: $non-active-menu;
+        font-weight: 600;
+    }
+}
+
 nav {
     position: absolute;
     background-color: $heading-color;
@@ -83,11 +90,9 @@ nav {
 
     .navbar-menu {
         margin-top: 64px;
-
-        a {
-            color: $non-active-menu;
+        ul {
+            width: 100%;
         }
-
         ul li {
             width: 176px;
             height: 48px;
@@ -96,11 +101,6 @@ nav {
             padding: 20px;
             margin: 20px auto;
             cursor: pointer;
-
-            a {
-                color: $non-active-menu;
-                font-weight: 600;
-            }
 
             &.active {
                 background-color: $btn-color;
@@ -115,6 +115,22 @@ nav {
                 color: $primary-color;
                 font-size: 16px;
             }
+            &.logout {
+                display: flex;
+                border-radius: 5px;
+                background-color: #F9F9F9;
+                cursor: pointer;
+                width: 176px;
+                height: 48px;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                margin: 18.5%;
+                bottom: 0;
+                a {
+                    color: $heading-color;
+                }
+            }
         }
 
         li img {
@@ -123,36 +139,6 @@ nav {
         }
     }
 }
-
-.logout {
-    display: flex;
-    border-radius: 5px;
-    background-color: #F9F9F9;
-    cursor: pointer;
-    width: 176px;
-    height: 48px;
-    align-items: center;
-    justify-content: center;
-    margin: 160px auto 0;
-
-    .icon-logout {
-        width: 24px;
-        margin-right: 8px;
-    }
-
-    li {
-        display: flex;
-        margin: auto;
-    }
-
-    a {
-        font-weight: 600;
-        margin: auto;
-        color: $heading-color;
-        font-size: 16px;
-    }
-}
-
 
 
 
@@ -354,8 +340,8 @@ main {
 // }
 
 @media screen and (min-width: 769px) {
-    .sidebar{
-        .menu{
+    .sidebar {
+        .menu {
             display: none;
         }
     }
@@ -423,14 +409,17 @@ main {
             top: 0;
             width: 100%;
             height: 100%;
+
             .logo {
                 display: none;
             }
-            &.nav-menu{
-                ul li{
+
+            &.nav-menu {
+                ul li {
                     width: 240px;
                 }
             }
+
             &.nav-menu.active {
                 display: block;
                 top: 0;
@@ -440,6 +429,8 @@ main {
                 transition: transform 0.5s ease-in-out;
 
                 .sidebar {
+                    height: 100%;
+
                     .menu {
                         justify-content: space-between;
                         align-items: center;
@@ -452,10 +443,12 @@ main {
                         }
                     }
 
-                    .logout {
-                        margin-top: 160px;
-                        margin-bottom: 30px;
-                    }
+                }
+                .logout {
+                        position: absolute;
+                        margin: 15px auto;
+                        margin-left: 35%;
+                        bottom: 0;
                 }
             }
         }
@@ -470,35 +463,42 @@ main {
                     border-bottom: none;
                 }
             }
-            .container{
+
+            .container {
                 display: block;
                 // margin: 32px 24px;
-                
-                
-                .data-izin{
+
+
+                .data-izin {
                     display: block;
-                    .content-left{
+
+                    .content-left {
                         width: 100%;
                     }
                 }
-                .content-right{
+
+                .content-right {
                     margin: 18px auto;
                 }
-                .content-left{
+
+                .content-left {
                     width: 333px;
                     border: none;
                     padding: 0;
-                    .form-group{
+
+                    .form-group {
                         display: flex;
                         width: auto;
                         justify-content: space-between;
                         gap: 30px;
                     }
-                    .group{
+
+                    .group {
                         display: flex;
                         gap: 30px;
                     }
-                    .label-group{
+
+                    .label-group {
                         display: block;
 
                         input {
@@ -506,19 +506,23 @@ main {
                             height: 42px;
                             margin: 16px 0;
                         }
-                        .textarea{
+
+                        .textarea {
                             width: 312px;
                             height: 140px;
                         }
-                        .flex{
+
+                        .flex {
                             display: block;
                         }
-                        .btn-jujur{
+
+                        .btn-jujur {
                             display: flex;
                             justify-content: center;
                         }
                     }
-                    button{
+
+                    button {
                         width: 656px;
                     }
                 }
@@ -553,6 +557,9 @@ main {
             top: 0;
             width: 100%;
             height: 100%;
+            &.nav-menu.active .sidebar li.logout{
+                    margin-left: 22%;
+            }
         }
 
         main {
@@ -581,9 +588,11 @@ main {
                     .form-group {
                         display: block;
                     }
-                    .group{
+
+                    .group {
                         display: block;
                     }
+
                     .label-group {
                         display: block;
 
@@ -625,24 +634,30 @@ main {
 }
 
 @media screen and (max-width: 375px) {
-    body{
-        main{
-            .container{
-                .content-left{
-                    .label-group{
-                        input{
+    body {
+        nav.nav-menu.active .sidebar .navbar-menu ul li.logout{
+            margin-left: 18.5%;
+        }
+        main {
+            .container {
+                .content-left {
+                    .label-group {
+                        input {
                             width: 312px;
                         }
-                        .textarea{
-                            width: 312px;
-                        }
-                        button{
-                            width: 312px;
 
+                        .textarea {
+                            width: 312px;
+                        }
+
+                        button {
+                            width: 312px;
+                            position: fixed;
                         }
                     }
                 }
-                .content-right{
+
+                .content-right {
                     width: 312px;
                 }
             }
