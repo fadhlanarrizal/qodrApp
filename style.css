@@ -391,12 +391,13 @@ main .container .content-right .text-content .sum {
   font-family: "Sora", sans-serif;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .sidebar .navbar-menu {
+    margin-top: 40px;
     height: 100vh;
   }
   .sidebar .navbar-menu .logout {
-    margin-top: 150px;
+    margin-top: 70px;
   }
 }
 
