@@ -237,29 +237,22 @@ main .container .content-left .label-group input {
           align-items: center;
 }
 
+main .container .content-left .label-group input[type=text] {
+  padding: 16px;
+}
+
+main .container .content-left .label-group input[type=date] {
+  padding: 16px;
+}
+
 main .container .content-left .label-group .textarea {
   width: 608px;
   height: 106px;
   resize: none;
+  padding: 16px;
   border: 0.5px solid #D9D9D9;
   border-radius: 2px;
   margin-top: 16px;
-}
-
-main .container .content-left .label-group ::-webkit-input-placeholder {
-  padding: 16px;
-}
-
-main .container .content-left .label-group :-ms-input-placeholder {
-  padding: 16px;
-}
-
-main .container .content-left .label-group ::-ms-input-placeholder {
-  padding: 16px;
-}
-
-main .container .content-left .label-group ::placeholder {
-  padding: 16px;
 }
 
 main .container .content-left .label-group .flex {
@@ -283,6 +276,9 @@ main .container .content-left .label-group .flex .btn-jujur {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   /* Rounded sliders */
 }
 
@@ -389,6 +385,12 @@ main .container .content-right .text-content .sum {
   color: #00B140;
   font-size: 80px;
   font-family: "Sora", sans-serif;
+}
+
+@media screen and (max-width: 1440px) {
+  nav .navbar-menu ul li.logout {
+    margin-top: 200px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -579,6 +581,9 @@ main .container .content-right .text-content .sum {
   }
   body main .container .content-left .label-group .flex {
     display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   body main .container .content-left .label-group .btn-jujur {
     display: -webkit-box;
@@ -670,9 +675,9 @@ main .container .content-right .text-content .sum {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   body main .container .content-left .label-group button {
     width: 357px;
