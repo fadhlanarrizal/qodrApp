@@ -95,6 +95,9 @@ nav {
             color: $primary-color;
             padding: 20px;
 
+            .hamburger.x{
+                cursor: pointer;
+            }
             .hamburger.x .bar:nth-child(1) {
                 transform: translateY(5px) rotate(45deg);
             }
