@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Izin Santri</title>
 </head>
 
 <body>
+    <div class="container-body">
     <header class="header">
         <div class="navbar">
             <img src="assets/Icon/logoQodr.svg" alt="logo qodr">
@@ -30,9 +31,10 @@
                     <span class="bar"></span>
                 </div>
             </div>
-            <div class="logo"><img src="Logo_Qodr.png" alt="logo qodr"></div>
+            <div class="logo"><img src="assets/logo/Logo_Qodr.png" alt="logo qodr"></div>
             <div class="navbar-menu">
                 <ul>
+                    <div class="container-list">
                     <li><img src="assets/Icon/profile.svg"><a href="#">Profil</a></li>
                     <li><img src="assets/Icon/tahfidz.svg"><a href="#">Tahfidz</a></li>
                     <li><img src="assets/Icon/roadmap.svg"><a href="#">Roadmap</a></li>
@@ -43,6 +45,7 @@
                     <li  class="logout">
                         <img src="assets/Icon/Logout.svg"><a href="#">Keluar</a>
                     </li>
+                </div>
                 </ul>
             </div>
         </div>
@@ -117,17 +120,24 @@
             </div>
         </div>
     </main>
+</div>
     <script>
         const hamburger = document.querySelector(".hamburger");
         const navMenu = document.querySelector(".nav-menu");
+        const hamburgerX = document.querySelector(".x");
+
 
         hamburger.addEventListener("click", mobileMenu);
+        hamburgerX.addEventListener("click", mobileMenu);
+
 
         function mobileMenu() {
             hamburger.classList.toggle("active");
             navMenu.classList.toggle("active");
+            hamburgerX.classList.toggle("");
         }
     </script>
+
 </body>
 
 </html>
